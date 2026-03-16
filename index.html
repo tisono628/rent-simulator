@@ -213,7 +213,7 @@
       const rentRaw = gopSen - fee1 - fee2;
       const rent    = Math.max(0, rentRaw);
       const jhat    = fee1 + fee2;
-      const gopRate = (gross > 0) ? (gopSen / gross * 100) : 0;
+      const gopRate = (gopSen > 0) ? (rent / gopSen * 100) : 0;
 
       document.getElementById('r-gross').textContent    = fmt(gross);
       document.getElementById('r-fee1').textContent     = fmt(fee1) + `　<span class="text-xs text-gray-400 font-normal">(${r1}%)</span>`;
